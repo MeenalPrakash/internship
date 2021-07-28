@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+   
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+</head>
+<body>
+ <label ><p id="countryname">Country Name:</p></label>
+   <script> function success() {
+        if(document.getElementById("textsend").value==="") { 
+               document.getElementById("myButton").disabled = true; 
+           } else { 
+               document.getElementById("myButton").disabled = false;
+           }
+       
+       if(document.getElementById("textsend").value==="") { 
+               document.getElementById("myButton2").disabled = true; 
+           } else { 
+               document.getElementById("myButton2").disabled = false;
+           }
+        }
+       
+    </script>
+   <textarea class="input" id="textsend" onkeyup="success()" name="demo" ></textarea>
+   
+         <button type="submit" id="myButton" class="float-left submit-button" disabled ><p id="countryname1">Click Here to check the weather</p></button>
+         <button id="myButton2" class="float-left submit-button"  disabled><p id="countryname1">Click Here to check the sports</p></button>
+    
+
+    <script type="text/javascript">
+        document.getElementById("myButton").onclick = function () {
+            location.href = "weather.html";
+        };
+    </script>
+    
+
+    <script type="text/javascript">
+        document.getElementById("myButton2").onclick = function () {
+            location.href = "sportstell.html";
+        };
+    </script>
+    <style>
+        body {
+       background-color: lightblue;
+
+             }
+             #countryname{
+                 font-size: x-large;
+                 position:absolute;
+                top:1%;
+                left:2%;
+             }
+             #countryname1{
+                 font-size: larger;
+             }
+             #myButton
+             {
+                height: 60px;
+                width: 180px;
+                display: block;
+                word-break: keep-all;
+              text-align: center;
+                 border-radius: 10%;
+                 position:absolute;
+                top:15%;
+                left:10%;
+             }
+             #myButton2
+             {
+                height: 60px;
+                width: 180px;
+                display: block;
+                word-break: keep-all;
+              text-align: center;
+                 border-radius:10%;
+                 position:absolute;
+                top:29%;
+                left:10%;
+             }
+             #textsend
+             {
+                height: 55px;
+                width: 180px;
+                display: block;
+                word-break: keep-all;
+              text-align: center;
+                border-radius: 10%;
+                position:absolute;
+                top:3%;
+                left:15%;
+
+             }
+
+    </style>
+
+</body>
