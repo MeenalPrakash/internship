@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+   
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+</head>
+<body>
+     
+    <script>
+     async function getsports()
+        {
+            const response = await fetch('http://api.weatherapi.com/v1/sports.json?key=f83519d24eb24d0abe5125304212707&q=India')
+            const data = await response.json();
+             var v1= JSON.stringify(data);
+             document.getElementById('sports').textContent=v1;
+            
+        }
+        getsports();
+    </script>
+    <p>
+        <span id="sports"></span>
+    </p>
+
+</body>
