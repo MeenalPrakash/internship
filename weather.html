@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+   
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+</head>
+<body>
+    
+    <script>
+        
+        async function getweather()
+        {
+            const response = await fetch('http://api.weatherapi.com/v1/current.json?key=f83519d24eb24d0abe5125304212707&q=India&aqi=no')
+            const data = await response.json();
+             var v= JSON.stringify(data.current);
+             document.getElementById('weather').textContent=v;
+            
+        }
+        getweather();
+    </script>
+    <p>
+        <span id=weather></span>
+    </p>
+    
+
+</body>
